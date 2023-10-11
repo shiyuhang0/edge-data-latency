@@ -1,10 +1,12 @@
-import { NextRequest as Request, NextResponse as Response } from 'next/server';
-import { connect } from '@tidbcloud/serverless';
+import { neon, neonConfig } from "@neondatabase/serverless";
+import { NextRequest as Request, NextResponse as Response } from "next/server";
 
 export const config = {
-  runtime: 'edge',
-  regions: ['iad1'],
+  runtime: "edge",
+  regions: ["iad1"],
 };
+
+neonConfig.fetchConnectionCache = true;
 
 const start = Date.now();
 
@@ -12,10 +14,10 @@ export default async function api(req: Request, ctx: any) {
   const count = toNumber(new URL(req.url).searchParams.get("count"));
   const time = Date.now();
 
-  const host = process.env.TiDB_DATABASE_URL
+  const sql = neon(process.env.NEON_DATABASE_URL);
 
-  const url = new URL('/v1beta/sql1', `https://http-gateway01.us-east-1.prod.aws.tidbcloud.com`)
-
+  let data = null;
+  const url = new URL('/sql1', `https://ep-damp-snowflake-71417527.us-east-1.aws.neon.tech`)
   for (let i = 0; i < count; i++) {
     try {
       const response = await fetch(url.toString(), {
@@ -32,8 +34,12 @@ export default async function api(req: Request, ctx: any) {
   }
 
   return Response.json({
+    data,
     queryDuration: Date.now() - time,
     invocationIsCold: start === time,
+    invocationRegion: (req.headers.get("x-vercel-id") ?? "").split(":")[1] || null,
+  }, {
+    headers: { "x-edge-is-cold": start === time ? "1" : "0" },
   });
 }
 

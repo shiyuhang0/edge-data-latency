@@ -208,9 +208,21 @@ export default function Page() {
                   icon={NeonIcon}
               />
               <DropdownItem
+                  data-testid="neonapi"
+                  value="neonapi"
+                  text="neonapi"
+                  icon={NeonIcon}
+              />
+              <DropdownItem
                   data-testid="planetscale2"
                   value="planetscale2"
                   text="planetscale2"
+                  icon={DatabaseIcon}
+              />
+              <DropdownItem
+                  data-testid="planetscaleapi"
+                  value="planetscaleapi"
+                  text="planetscaleapi"
                   icon={DatabaseIcon}
               />
               <DropdownItem
