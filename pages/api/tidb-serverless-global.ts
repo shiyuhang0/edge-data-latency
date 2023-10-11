@@ -21,6 +21,8 @@ export default async function api(req: Request, ctx: any) {
       LIMIT 10`)
   }
 
+  console.log(start === time)
+
   return Response.json({
     data,
     queryDuration: Date.now() - time,

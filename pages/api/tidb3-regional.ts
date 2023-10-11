@@ -28,6 +28,8 @@ export default async function api(request: NextApiRequest,
       LIMIT 10`)
   }
 
+  console.log(start === time)
+
   return response.json({
     data,
     queryDuration: Date.now() - time,
