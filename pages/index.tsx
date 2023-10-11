@@ -220,6 +220,12 @@ export default function Page() {
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
+                  data-testid="tidbapi"
+                  value="tidbapi"
+                  text="tidbapi"
+                  icon={TiDBCloudIcon}
+              />
+              <DropdownItem
                 data-testid="tigris"
                 value="tigris"
                 text="Tigris (HTTP API)"
