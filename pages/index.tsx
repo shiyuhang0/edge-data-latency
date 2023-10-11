@@ -192,13 +192,13 @@ export default function Page() {
               <DropdownItem
                   data-testid="tidb-serverless"
                   value="tidb-serverless"
-                  text="TiDB edge (serverless driver)"
+                  text="Edge Function (serverless driver)"
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
                   data-testid="tidb2"
                   value="tidb2"
-                  text="TiDB serverless (serverless driver)"
+                  text="Serverless Function (serverless driver)"
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
@@ -228,7 +228,7 @@ export default function Page() {
               <DropdownItem
                   data-testid="tidb3"
                   value="tidb3"
-                  text="TiDB serverless (mysql2 driver)"
+                  text="Serverless Function (mysql2 driver)"
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
@@ -354,7 +354,7 @@ export default function Page() {
             <Card>
               <Title>Latency distribution (processing time)</Title>
               <Text>
-                This is how long it takes for the edge function to run the
+                This is how long it takes for the function to run the
                 queries and return the result. Your internet connections{" "}
                 <b>will not</b> influence these results.
               </Text>
@@ -373,7 +373,7 @@ export default function Page() {
                   };
                 })}
                 index="attempt"
-                categories={["Global", "Regional"]}
+                categories={["Regional"]}
                 colors={["indigo", "cyan"]}
                 valueFormatter={dataFormatter}
                 yAxisWidth={48}
@@ -400,7 +400,7 @@ export default function Page() {
                   };
                 })}
                 index="attempt"
-                categories={["Global", "Regional"]}
+                categories={["Regional"]}
                 colors={["indigo", "cyan"]}
                 valueFormatter={dataFormatter}
                 yAxisWidth={48}
