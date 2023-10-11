@@ -162,13 +162,13 @@ export default function Page() {
               <DropdownItem
                 data-testid="neon"
                 value="neon"
-                text="Neon (@neondatabase/serverless driver)"
+                text="Neon edge (serverless driver)"
                 icon={NeonIcon}
               />
               <DropdownItem
                 data-testid="planetscale"
                 value="planetscale"
-                text="PlanetScale (Kysely + Serverless SDK)"
+                text="PlanetScale Edge (Kysely + Serverless SDK)"
                 icon={DatabaseIcon}
               />
               <DropdownItem
@@ -192,19 +192,19 @@ export default function Page() {
               <DropdownItem
                   data-testid="tidb-serverless"
                   value="tidb-serverless"
-                  text="TiDB Serverless (serverless driver)"
+                  text="TiDB edge (serverless driver)"
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
                   data-testid="tidb2"
                   value="tidb2"
-                  text="tidb2"
+                  text="TiDB serverless (serverless driver)"
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
                   data-testid="neon2"
                   value="neon2"
-                  text="neon2"
+                  text="Neon serverless (serverless driver)"
                   icon={NeonIcon}
               />
               <DropdownItem
@@ -216,7 +216,7 @@ export default function Page() {
               <DropdownItem
                   data-testid="planetscale2"
                   value="planetscale2"
-                  text="planetscale2"
+                  text="PlanetScale serverless (Kysely + Serverless SDK)"
                   icon={DatabaseIcon}
               />
               <DropdownItem
@@ -228,7 +228,7 @@ export default function Page() {
               <DropdownItem
                   data-testid="tidb3"
                   value="tidb3"
-                  text="tidb3"
+                  text="TiDB serverless (mysql2 driver)"
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
