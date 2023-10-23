@@ -196,6 +196,12 @@ export default function Page() {
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
+                  data-testid="tidb-eu"
+                  value="tidb-eu"
+                  text="eu Edge Function (serverless driver)"
+                  icon={TiDBCloudIcon}
+              />
+              <DropdownItem
                   data-testid="tidb2"
                   value="tidb2"
                   text="Serverless Function (serverless driver)"
