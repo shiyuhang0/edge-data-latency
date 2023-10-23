@@ -3,4 +3,4 @@ export const config = {
   regions: ['arn1'],
 };
 
-export { default } from './tidb-serverless-global';
+export { default } from './tidb-eu-global';
