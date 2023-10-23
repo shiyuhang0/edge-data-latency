@@ -373,7 +373,7 @@ export default function Page() {
                   };
                 })}
                 index="attempt"
-                categories={["Regional"]}
+                categories={["Global", "Regional"]}
                 colors={["indigo", "cyan"]}
                 valueFormatter={dataFormatter}
                 yAxisWidth={48}
@@ -400,7 +400,7 @@ export default function Page() {
                   };
                 })}
                 index="attempt"
-                categories={["Regional"]}
+                categories={["Global", "Regional"]}
                 colors={["indigo", "cyan"]}
                 valueFormatter={dataFormatter}
                 yAxisWidth={48}
