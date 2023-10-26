@@ -16,9 +16,7 @@ export default async function api(req: Request, ctx: any) {
   let data = null;
   for (let i = 0; i < count; i++) {
     data = await conn.execute(`
-      SELECT emp_no, first_name, last_name
-      FROM employees
-      LIMIT 10`)
+      show databases`)
   }
 
   console.log(start === time)
