@@ -22,10 +22,7 @@ export default async function api(request: NextApiRequest,
 
   let data = null;
   for (let i = 0; i < count; i++) {
-    data = await connection.execute(`
-      SELECT emp_no, first_name, last_name
-      FROM employees
-      LIMIT 10`)
+    data = await connection.execute(`show tables`)
   }
 
   console.log(start === time)
@@ -35,10 +32,4 @@ export default async function api(request: NextApiRequest,
     queryDuration: Date.now() - time,
     invocationIsCold: start === time,
   });
-}
-
-// convert a query parameter to a number, applying a min and max, defaulting to 1
-function toNumber(queryParam: string | null, min = 1, max = 5) {
-  const num = Number(queryParam);
-  return Number.isNaN(num) ? 1 : Math.min(Math.max(num, min), max);
 }

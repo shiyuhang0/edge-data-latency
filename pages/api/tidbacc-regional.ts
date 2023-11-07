@@ -9,7 +9,7 @@ export default async function api(request: NextApiRequest,
   const time = Date.now();
 
   const connection = await mysql.createConnection({
-    host: process.env.TIDB_HOST,
+    host: process.env.TIDB_HOST2,
     port: 4000,
     user: process.env.TIDB_USER,
     password: process.env.TIDB_PASSWORD,
@@ -23,8 +23,10 @@ export default async function api(request: NextApiRequest,
   let data = null;
   for (let i = 0; i < count; i++) {
     data = await connection.execute(`
-     show tables`)
+      show tables`)
   }
+
+  console.log(start === time)
 
   return response.json({
     data,

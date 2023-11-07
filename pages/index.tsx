@@ -238,6 +238,12 @@ export default function Page() {
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
+                  data-testid="tidbacc"
+                  value="tidbacc"
+                  text="Serverless Function (mysql2 driver)"
+                  icon={TiDBCloudIcon}
+              />
+              <DropdownItem
                   data-testid="tidbapi"
                   value="tidbapi"
                   text="tidbapi"
