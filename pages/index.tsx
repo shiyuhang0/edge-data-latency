@@ -240,7 +240,7 @@ export default function Page() {
               <DropdownItem
                   data-testid="tidbacc"
                   value="tidbacc"
-                  text="Serverless Function (mysql2 driver)"
+                  text="Serverless Function acc(mysql2 driver)"
                   icon={TiDBCloudIcon}
               />
               <DropdownItem
