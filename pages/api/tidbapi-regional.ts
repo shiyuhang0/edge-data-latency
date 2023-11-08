@@ -12,9 +12,8 @@ export default async function api(req: Request, ctx: any) {
   const count = toNumber(new URL(req.url).searchParams.get("count"));
   const time = Date.now();
 
-  const host = process.env.TiDB_DATABASE_URL
-
   const url = new URL('/v1beta/sql1', `https://http-gateway01.us-east-1.prod.aws.tidbcloud.com`)
+  const auth =  process.env.Authorization
 
   for (let i = 0; i < count; i++) {
     try {
@@ -22,8 +21,7 @@ export default async function api(req: Request, ctx: any) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'TiDB-Database': 'employees',
-          'TiDB-Session': ''
+          'Authorization': auth
         },
         cache: 'no-store'
       })
