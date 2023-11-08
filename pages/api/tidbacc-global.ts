@@ -22,7 +22,6 @@ export default async function api(request: NextApiRequest,
       body: JSON.stringify({"query":"show databases"}),
       cache: 'no-store'
     })
-    console.log(data)
   }
 
   return response.json({

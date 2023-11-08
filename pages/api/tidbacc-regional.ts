@@ -24,7 +24,6 @@ export default async function api(request: NextApiRequest,
   for (let i = 0; i < count; i++) {
     data = await connection.execute(`
       show databases`)
-    console.log(data)
   }
 
   console.log(start === time)
