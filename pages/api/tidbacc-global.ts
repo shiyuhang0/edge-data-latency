@@ -11,8 +11,9 @@ export default async function api(request: NextApiRequest,
   const url = new URL('/v1beta/sql1', `https://http2-gateway01.us-east-1.prod.aws.tidbcloud.com`)
   const auth =  process.env.Authorization
 
+  let data = null;
   for (let i = 0; i < count; i++) {
-    const response = await fetch(url.toString(), {
+    data = await fetch(url.toString(), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
