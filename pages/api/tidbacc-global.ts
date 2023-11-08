@@ -21,6 +21,7 @@ export default async function api(request: NextApiRequest,
       },
       cache: 'no-store'
     })
+    console.log(data)
   }
 
   return response.json({
