@@ -8,7 +8,7 @@ export default async function api(request: NextApiRequest,
   const count = Number(request.query.count);
   const time = Date.now();
 
-  const url = new URL('/v1beta/sql1', `https://http2-gateway01.us-east-1.prod.aws.tidbcloud.com`)
+  const url = new URL('/v1beta/sql1', `https://http2-gateway01.us-east-1.dev.shared.aws.tidbcloud.com`)
   const auth =  process.env.Authorization
 
   let data = null;
