@@ -23,7 +23,7 @@ export default async function api(request: NextApiRequest,
   let data = null;
   for (let i = 0; i < count; i++) {
     data = await connection.execute(`
-      show tables`)
+      show databases`)
     console.log(data)
   }
 

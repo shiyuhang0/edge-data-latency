@@ -19,6 +19,7 @@ export default async function api(request: NextApiRequest,
           'Content-Type': 'application/json',
           'Authorization': auth
         },
+        body: JSON.stringify({"query":"show databases"}),
         cache: 'no-store'
       })
   }
