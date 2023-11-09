@@ -26,6 +26,7 @@ export default async function api(request: NextApiRequest,
       show databases`)
   }
 
+  console.log(data)
   console.log(start === time)
 
   return response.json({
