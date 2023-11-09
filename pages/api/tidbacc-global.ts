@@ -13,7 +13,7 @@ export default async function api(request: NextApiRequest,
 
   let data = null;
   for (let i = 0; i < count; i++) {
-    data = await fetch(url.toString(), {
+    const resp = await fetch(url.toString(), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -22,6 +22,7 @@ export default async function api(request: NextApiRequest,
       body: JSON.stringify({"query":"show databases"}),
       cache: 'no-store'
     })
+    data = await resp.json()
     console.log(data)
   }
 
